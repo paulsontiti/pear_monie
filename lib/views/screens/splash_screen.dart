@@ -51,12 +51,12 @@ class _SplashScreenState extends State<SplashScreen>
 
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     //change current page value
-    Timer.periodic(const Duration(seconds: 2), (timer) {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
       setState(() {
         currentPageValue = currentPageValue == countOfPageItems - 1 ? 0 : currentPageValue + 1;
       });
     });
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 10), () {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
